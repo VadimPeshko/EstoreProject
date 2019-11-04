@@ -1,8 +1,6 @@
-'use strict'
-
 //Получаем данные
 function getData() {
-  const productCard = document.querySelector('.product-card');
+  const goodsWrap = document.querySelector('.goods');
   return fetch('../db/db.json')
   .then((response) => {
     if(response.ok){
@@ -16,7 +14,7 @@ function getData() {
   })
   .catch((err) => {
     console.warn(err);
-    productCard.innerHTML = '<div style ="color: red; font-size: 36px">Ошибка!</div>'
+    goodsWrap.innerHTML = '<div style ="color: red; font-size: 36px; margin-bottom: 50px;">Ошибка!</div>'
   })
 };
 
